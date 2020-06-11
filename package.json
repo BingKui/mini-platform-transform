@@ -1,0 +1,37 @@
+{
+  "name": "mini-platform-transform",
+  "version": "0.0.1",
+  "description": "小程序平台转换工具",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "mini": "./bin/mini"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/mini-platform-transform.git"
+  },
+  "keywords": [
+    "miniprogram"
+  ],
+  "author": "康兵奎",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BingKui/mini-platform-transform/issues"
+  },
+  "homepage": "https://github.com/BingKui/mini-platform-transform#readme",
+  "dependencies": {
+    "cfonts": "^2.8.2",
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.1.0",
+    "ora": "^4.0.4",
+    "shelljs": "^0.8.4"
+  }
+}

@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 
 // 引入命令行工具
-const program = require('commander');
+const { Command } = require('commander');
 const pkg = require('../package.json');
 
 const tranformCli = require('../lib/tranform');
 const pluginCli = require('../lib/plugin');
 const configCli = require('../lib/config');
 
+const program = new Command();
 program.version(pkg.version, '-v, --version')
-  .option('tranform', '转换基础文件（xml, css, 自定义文件）')
-  .option('plugin', '转换插件配置文件（plugin.json）')
-  .option('config', '转换配置信息（app.json）')
+  .option('-t, --tranform', '转换基础文件（xml, css, 自定义文件）')
+  .option('-p, --plugin', '转换插件配置文件（plugin.json）')
+  .option('-c, --config', '转换配置信息（app.json）')
   .on('--help', function() {})
   .parse(process.argv);
 
-console.log(program);
 if (program && program.tranform) {
-  console.log('转换');
   tranformCli(process.argv);
 }
 if (program.plugin) {

@@ -104,6 +104,7 @@ const renameFileSuffix = (path, file, tempalteSuffix, targetSuffix) => {
 };
 
 module.exports = {
+    getFileInfo,
     readFileList,
     changeExtFile,
     changeContentPrefix,

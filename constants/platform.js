@@ -84,8 +84,22 @@ const PLATFORM = {
     },
 };
 
+const PLATFORM_VALUE = {
+    wechat: {
+        name: '微信',
+        value: 'wechat',
+        fileExt: WECHAT_FILE_SUFFIX.file_xml,
+    },
+    alipay: {
+        name: '支付宝',
+        value: 'alipay',
+        fileExt: ALIPAY_FILE_SUFFIX.file_xml,
+    },
+};
+
 module.exports = {
     PLATFORM,
+    PLATFORM_VALUE,
     WECHAT_FILE_SUFFIX,
     ALIPAY_FILE_SUFFIX,
 };

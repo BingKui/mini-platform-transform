@@ -7,12 +7,14 @@ const pkg = require('../package.json');
 const tranformCli = require('../lib/tranform');
 const pluginCli = require('../lib/plugin');
 const configCli = require('../lib/config');
+const linkCli = require('../lib/link');
 
 const program = new Command();
 program.version(pkg.version, '-v, --version')
   .option('-t, --tranform', '转换基础文件（xml, css, 自定义文件）')
   .option('-p, --plugin', '转换插件配置文件（plugin.json）')
   .option('-c, --config', '转换配置信息（app.json）')
+  .option('-l, --link', '转换插件引用方式')
   .on('--help', function() {})
   .parse(process.argv);
 
@@ -24,4 +26,7 @@ if (program.plugin) {
 }
 if (program.config) {
   configCli(process.argv);
+}
+if (program.link) {
+  linkCli(process.argv);
 }

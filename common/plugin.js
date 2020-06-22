@@ -4,7 +4,7 @@ const wechatToAlipay = (str) => {
     const result = {
         publicComponents: strValue.publicComponents || {},
         publicPages: strValue.pages || {},
-        pages: strValue.pages || {},
+        pages: Object.values(strValue.pages) || [],
         main: strValue.main || '',
     };
     return JSON.stringify(result, null, '\t');

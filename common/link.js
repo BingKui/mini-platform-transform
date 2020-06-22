@@ -31,7 +31,7 @@ const changeFileKey = (fileItem) => {
     let result = {};
     for (let key in content.usingComponents) {
         let _key = key.replace(/([A-Z])/g,'-$1').toLowerCase();
-        console.log(key,  _key.substr(1))
+        logger.warn('转换标签', `${key} => ${_key.substr(1)}`)
         xmlFileContent = xmlFileContent.replace(new RegExp(`<${key}`, 'gm'), `<${_key.substr(1)}`);
         xmlFileContent = xmlFileContent.replace(new RegExp(`${key}>`, 'gm'), `${_key.substr(1)}>`);
         result = {
